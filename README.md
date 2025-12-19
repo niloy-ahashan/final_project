@@ -24,18 +24,12 @@ This project is implemented in **Python** and uses **PyTorch** for model trainin
 - tqdm
 
 
-## Setup Instructions
-Create and activate the Conda environment:
-
-```bash
-conda env create -f environment.yml
-conda activate fl-sketch
-conda deactivate
-
-
 ## How to Run the Code
 
-### 1. Run Federated Averaging (FedAvg Baseline)
+```bash
+## How to Run the Code
+
+1. Run Federated Averaging (FedAvg Baseline)
 ```bash
 python3 cv_train.py \
   --dataset_dir ~/datasets/cifar10/ \
