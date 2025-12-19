@@ -10,7 +10,7 @@ The framework is evaluated on an image recognition task using deep neural networ
 - `fed_worker.py` — Client-side training and gradient compression  
 - `cv_train.py` — Image classification training pipeline  
 - `utils.py` — Utility functions and argument parsing  
-- `cmvec/` — Implementation of Count Mean Sketch  
+- `cmvec.py` — Implementation of Count Mean Sketch  
 
 ## Requirements
 This project is implemented in **Python** and uses **PyTorch** for model training and distributed execution.
@@ -23,13 +23,12 @@ This project is implemented in **Python** and uses **PyTorch** for model trainin
 - scipy
 - tqdm
 
+---
 
 ## How to Run the Code
 
-```bash
-## How to Run the Code
+### 1. Run Federated Averaging (FedAvg Baseline)
 
-1. Run Federated Averaging (FedAvg Baseline)
 ```bash
 python3 cv_train.py \
   --dataset_dir ~/datasets/cifar10/ \
@@ -46,33 +45,3 @@ python3 cv_train.py \
   --local_batch_size -1 \
   --local_momentum 0.0 \
   --max_grad_norm 2.5
-
-## How to Run the Code
-
-### 1. Run Count Mean Sketch
-```bash
-
-python3 cv_train.py \
-  --dataset_dir ~/datasets/cifar10/ \
-  --dataset_name CIFAR10 \
-  --model FixupResNet9 \
-  --mode sketch \
-  --local_batch_size 5 \
-  --local_momentum 0.0 \
-  --virtual_momentum 0.9 \
-  --error_type virtual \
-  --num_clients 10000 \
-  --num_devices 1 \
-  --num_workers 100 \
-  --share_ps_gpu \
-  --k 10000 \
-  --num_rows 5 \
-  --num_cols 500000 \
-  --device cuda \
-  --lr_scale 0.06 \
-  --num_blocks 1
-
-
-
-
-
