@@ -10,8 +10,7 @@ The framework is evaluated on an image recognition task using deep neural networ
 - `fed_worker.py` — Client-side training and gradient compression  
 - `cv_train.py` — Image classification training pipeline  
 - `utils.py` — Utility functions and argument parsing  
-- `sketch/` — Implementation of Count Mean Sketch  
-- `environment.yml` — Conda environment specification  
+- `cmvec/` — Implementation of Count Mean Sketch  
 
 ## Requirements
 This project is implemented in **Python** and uses **PyTorch** for model training and distributed execution.
@@ -24,8 +23,6 @@ This project is implemented in **Python** and uses **PyTorch** for model trainin
 - scipy
 - tqdm
 
-All dependencies are specified in `environment.yml`.
-
 
 ## Setup Instructions
 Create and activate the Conda environment:
@@ -33,7 +30,8 @@ Create and activate the Conda environment:
 ```bash
 conda env create -f environment.yml
 conda activate fl-sketch
-  exit
+conda deactivate
+
 
 ## How to Run the Code
 
