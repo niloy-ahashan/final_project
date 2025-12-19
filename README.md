@@ -26,6 +26,15 @@ This project is implemented in **Python** and uses **PyTorch** for model trainin
 
 All dependencies are specified in `environment.yml`.
 
+
+## Setup Instructions
+Create and activate the Conda environment:
+
+```bash
+conda env create -f environment.yml
+conda activate fl-sketch
+  exit
+
 ## How to Run the Code
 
 ### 1. Run Federated Averaging (FedAvg Baseline)
@@ -46,6 +55,10 @@ python3 cv_train.py \
   --local_momentum 0.0 \
   --max_grad_norm 2.5
 
+## How to Run the Code
+
+### 1. Run Count Mean Sketch
+```bash
 
 python3 cv_train.py \
   --dataset_dir ~/datasets/cifar10/ \
@@ -69,11 +82,5 @@ python3 cv_train.py \
 
 
 
-## Setup Instructions
-Create and activate the Conda environment:
-
-```bash
-conda env create -f environment.yml
-conda activate fl-sketch
 
 
