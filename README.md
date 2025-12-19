@@ -45,15 +45,9 @@ python3 cv_train.py \
   --local_batch_size -1 \
   --local_momentum 0.0 \
   --max_grad_norm 2.5
-
-
-
-### Step 3: Paste this **entire section**
-
-```markdown
 ---
 
-2. Run Count Mean Sketch–Based Federated Learning
+### 2. Run Count Mean Sketch–Based Federated Learning
 
 ```bash
 python3 cv_train.py \
@@ -75,5 +69,6 @@ python3 cv_train.py \
   --device cuda \
   --lr_scale 0.06 \
   --num_blocks 1
+
 
 
